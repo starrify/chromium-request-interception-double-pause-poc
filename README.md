@@ -23,7 +23,7 @@ Normally when there is request interception configured via [the `Fetch.enable` C
 
 However, when the described issue is triggered, one may observe the stylesheet-initiated font requests paused twice, if the first pause is then continued (via [the `Fetch.continueRequest` CDP method][cdp-fetch-continuerequest]).
 
-When such double pause issue happens, both pause events would have the same `networkId` value indicating the request, while different `requestId` values indicating the interception.
+When such double pause issue happens, both pause events would have the same `networkId` value indicating the request, and different `requestId` values indicating the interception.
 
 When such double pause issue happens, continuing the second pause would have Chrome keep processing the request as normal. There is no third pause observed.
 
@@ -47,7 +47,7 @@ All my tests were carried out from two system environments:
 - My personal laptop using Arch Linux x86_64, with kernel version 5.10.16 and Node.js v15.11.0
 - [The `node:14.16.0-buster` Docker image][dockerhub-node-14-16-0-buster], with Debian buster and Node.js v14.16.0
 
-There are `Puppeteer` and `Playwright` involved in my reproducing the issue. It is assume that they are not the cause, yet I'm also sharing the version info that I tested with:
+There are `Puppeteer` and `Playwright` involved in my reproducing the issue. It is assumed that they are not the cause, yet I'm also sharing the version info that I tested with:
 - Puppeteer: The current release v8.0.0. Also tested with many previous releases, dating back to v1.14.0.
 - Playwright: The current release v1.10.0.
 
@@ -99,9 +99,9 @@ const puppeteer = require('puppeteer');
 
 It is suggested to launch the scripts with the `DEBUG=*` to retrieve all debug messages, or `DEBUG=puppeteer:protocol*` for Puppeteer / `DEBUG=*protocol` for Playwright to retrieve only the debug output for the DevTools Protocol details.
 
-Due to the implement limitations in both Puppeteer and Playwright, which would be discussed in a later section, both script would fail at the `page.goto` line (e.g. `Navigation Timeout Exceeded`) when successfully triggering the issue. Despite the failure, it shall be enough to confirm this issue via the DevTools Protocol debug output.
+Due to the implement limitations in both Puppeteer and Playwright, which would be discussed in a later section, both scripts would fail at the `page.goto` line (e.g. `Navigation Timeout Exceeded`) when successfully triggering the issue. Despite the failure, it shall be enough to confirm this issue via the DevTools Protocol debug output.
 
-There is a third script provides in `scripts/test_puppeteer_mitigation.js` which mitigates the Puppeteer failure and makes the render successful. When using this script, the Chromium issue may be also confirmed from the debug output.
+There is a third script provided in `scripts/test_puppeteer_mitigation.js` which mitigates the Puppeteer failure and makes the render successful. When using this script, the Chromium issue may be also confirmed from the debug output.
 
 ## 7. Test targets
 
@@ -126,7 +126,7 @@ $ docker build -t tmptest-cr -f ./Dockerfile .
 # Launch the test for the "font-and-video" case using the Puppeteer script, saving all debug output
 $ docker run --rm tmptest-cr:latest DEBUG=* TEST_URL=http://localhost:8000/static_server/font-and-video.html node scripts/test_puppeteer.js &> sample_results/puppeteer_font-and-video_full.log
 
-# Query the relavant request ID / interception ID for the .woff font resource
+# Query the relevant request ID / interception ID for the .woff font resource
 $ cat sample_results/puppeteer_font-and-video_full.log | grep Ahem.woff | grep -Po "(?<=protocol:RECV ◀ ).*" | jq '.params|(.requestId//.networkId)' -r
 interception-job-3.0
 56.4
@@ -146,7 +146,7 @@ Another example of launching the test with the https://github.com/ case using th
 # Launch the test for https://github.com/ using the Puppeteer-mitigation script, saving all debug output
 $ docker run --rm tmptest-cr:latest DEBUG=* TEST_URL=https://github.com/ node scripts/test_puppeteer_mitigation.js &> sample_results/puppeteer_mitigation_github_full.log
 
-# Query the relavant request ID / interception ID for the Alliance-No-1-Regular.woff font resource
+# Query the relevant request ID / interception ID for the Alliance-No-1-Regular.woff font resource
 $ cat sample_results/puppeteer_mitigation_github_full.log | grep Alliance-No-1-Regular.woff | grep -Po "(?<=protocol:RECV ◀ ).*" | jq '.params|(.requestId//.networkId)' -r
 interception-job-26.0
 54.162
@@ -182,7 +182,7 @@ In several major projects that communicates with Chromium via the DevTools Proto
 
 Therefore one immediate assumption is that the above tools are not impacted by the described issue, as they all explicitly disable caching upon configuring request interception. Therefore the described issue may not be regarded as a high-priority one.
 
-The current implement of those major tools, however, also prevents users from making use of caching and request interception at the same time. Thus resolving this issue may in some scenarios certainly bring some help to specific users.
+The current implementation of those major tools, however, also prevents users from making use of caching and request interception at the same time. Thus resolving this issue may in some scenarios certainly bring some help to specific users.
 
 It's also worth noticing that, due to my limited knowledge of Chromium, I am rather unsure whether there may be any other issue to occur if caching and request interception are both enabled, although I have not yet observed any during my personal tests.
 
