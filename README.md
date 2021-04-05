@@ -9,13 +9,13 @@ I have created a repository on GitHub at https://github.com/starrify/chromium-re
 ## 2. Conditions to trigger the issue
 
 For stably triggering the issue, these mandatory conditions must be all satisfied:
-2.1. There is request interception enabled (via [the `Fetch.enable` CDP method][cdp-fetch-enable]).
-2.2. There is caching enabled (not disabled via [the `Network.setCacheDisabled` CDP method][cdp-network-setcachedisabled]).
-2.3. The page tries to load custom fonts via stylesheets. I'm unsure whether the issue may be triggered by other types of requests, but this is the only one type that I could confirm for now.
+- 2.1. There is request interception enabled (via [the `Fetch.enable` CDP method][cdp-fetch-enable]).
+- 2.2. There is caching enabled (not disabled via [the `Network.setCacheDisabled` CDP method][cdp-network-setcachedisabled]).
+- 2.3. The page tries to load custom fonts via stylesheets. I'm unsure whether the issue may be triggered by other types of requests, but this is the only one type that I could confirm for now.
 
 In addition to the above conditions, any of the below ones is also needed:
-2.4.a. The font itself delays for long enough (a few hundred milliseconds would do).
-2.4.b. There are other resources that would [delay the load event][html-spec-delay-load-event] and delay for long enough (a few hundred milliseconds would do). For example, that may be an `<img>`, a `<script>`, or a `<video>` that comes with the `poster` attribute.
+- 2.4.a. The font itself delays for long enough (a few hundred milliseconds would do).
+- 2.4.b. There are other resources that would [delay the load event][html-spec-delay-load-event] and delay for long enough (a few hundred milliseconds would do). For example, that may be an `<img>`, a `<script>`, or a `<video>` that comes with the `poster` attribute.
 
 ## 3. Expected and observed behaviors
 
