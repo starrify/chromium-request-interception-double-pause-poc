@@ -1,0 +1,522 @@
+2021-04-05T19:16:18.598Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'BrowserType',
+    initializer: {
+      executablePath: '/root/.cache/ms-playwright/chromium-857950/chrome-linux/chrome',
+      name: 'chromium'
+    },
+    guid: 'BrowserType@cc8259a89374bad594d126bfd3c8fba7'
+  }
+}
+2021-04-05T19:16:18.600Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'BrowserType',
+    initializer: {
+      executablePath: '/root/.cache/ms-playwright/firefox-1238/firefox/firefox',
+      name: 'firefox'
+    },
+    guid: 'BrowserType@fed8670b8f00893bfbabac0a7c516539'
+  }
+}
+2021-04-05T19:16:18.600Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'BrowserType',
+    initializer: {
+      executablePath: '/root/.cache/ms-playwright/webkit-1446/pw_run.sh',
+      name: 'webkit'
+    },
+    guid: 'BrowserType@4011705445e178dfc0e8965be2471e25'
+  }
+}
+2021-04-05T19:16:18.600Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'Android',
+    initializer: {},
+    guid: 'Android@0e98448dd70b501d4b69527f80489cbe'
+  }
+}
+2021-04-05T19:16:18.601Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'Electron',
+    initializer: {},
+    guid: 'Electron@c6904b5e0a0e62f93f70e7931672862b'
+  }
+}
+2021-04-05T19:16:18.601Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'Selectors',
+    initializer: {},
+    guid: 'Selectors@2c23f3ef15ef79a85d6fc372c5a18c2e'
+  }
+}
+2021-04-05T19:16:18.602Z pw:channel:event {
+  guid: '',
+  method: '__create__',
+  params: {
+    type: 'Playwright',
+    initializer: {
+      chromium: [Object],
+      firefox: [Object],
+      webkit: [Object],
+      android: [Object],
+      electron: [Object],
+      deviceDescriptors: [Array],
+      selectors: [Object]
+    },
+    guid: 'Playwright'
+  }
+}
+2021-04-05T19:16:18.604Z pw:api => browserType.launch started
+2021-04-05T19:16:18.606Z pw:channel:command {
+  id: 1,
+  guid: 'BrowserType@cc8259a89374bad594d126bfd3c8fba7',
+  method: 'launch',
+  params: { args: [ '--no-sandbox' ], ignoreAllDefaultArgs: false }
+}
+2021-04-05T19:16:18.617Z pw:browser <launching> /root/.cache/ms-playwright/chromium-857950/chrome-linux/chrome --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/tmp/playwright_chromiumdev_profile-XgzVd8 --remote-debugging-pipe --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --no-startup-window
+2021-04-05T19:16:18.617Z pw:browser <launched> pid=20
+2021-04-05T19:16:18.618Z pw:protocol SEND ► {"id":1,"method":"Browser.getVersion"}
+2021-04-05T19:16:18.769Z pw:browser [pid=20][err] [0405/191618.767847:ERROR:bus.cc(393)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+2021-04-05T19:16:18.778Z pw:protocol ◀ RECV {"id":1,"result":{"protocolVersion":"1.3","product":"HeadlessChrome/90.0.4430.0","revision":"@e5ce7dc4f7518237b3d9bb93cccca35d25216cbe","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","jsVersion":"9.0.257"}}
+2021-04-05T19:16:18.778Z pw:protocol SEND ► {"id":2,"method":"Target.setAutoAttach","params":{"autoAttach":true,"waitForDebuggerOnStart":true,"flatten":true}}
+2021-04-05T19:16:18.779Z pw:protocol ◀ RECV {"id":2,"result":{}}
+2021-04-05T19:16:18.780Z pw:channel:event {
+  guid: 'BrowserType@cc8259a89374bad594d126bfd3c8fba7',
+  method: '__create__',
+  params: {
+    type: 'Browser',
+    initializer: { version: '90.0.4430.0', name: 'chromium' },
+    guid: 'Browser@abf012a2b1208c78942f97d8129605ac'
+  }
+}
+2021-04-05T19:16:18.781Z pw:channel:response {
+  id: 1,
+  result: { browser: { guid: 'Browser@abf012a2b1208c78942f97d8129605ac' } }
+}
+2021-04-05T19:16:18.781Z pw:api <= browserType.launch succeeded
+2021-04-05T19:16:18.781Z pw:api => browser.newContext started
+2021-04-05T19:16:18.782Z pw:channel:command {
+  id: 2,
+  guid: 'Browser@abf012a2b1208c78942f97d8129605ac',
+  method: 'newContext',
+  params: { sdkLanguage: 'javascript', noDefaultViewport: false }
+}
+2021-04-05T19:16:18.782Z pw:protocol SEND ► {"id":3,"method":"Target.createBrowserContext","params":{"disposeOnDetach":true}}
+2021-04-05T19:16:18.783Z pw:protocol ◀ RECV {"id":3,"result":{"browserContextId":"ACC46235F130BD84FBA639371DE79C07"}}
+2021-04-05T19:16:18.783Z pw:protocol SEND ► {"id":4,"method":"Browser.setDownloadBehavior","params":{"behavior":"deny","browserContextId":"ACC46235F130BD84FBA639371DE79C07","downloadPath":"/tmp/playwright_downloads-IJ6WHZ"}}
+2021-04-05T19:16:18.786Z pw:browser [pid=20][err] [0405/191618.786682:ERROR:vaapi_wrapper.cc(594)] Could not get a valid VA display
+2021-04-05T19:16:18.787Z pw:browser [pid=20][err] [0405/191618.787230:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is egl
+2021-04-05T19:16:18.788Z pw:protocol ◀ RECV {"id":4,"result":{}}
+2021-04-05T19:16:18.789Z pw:channel:event {
+  guid: 'Browser@abf012a2b1208c78942f97d8129605ac',
+  method: '__create__',
+  params: {
+    type: 'BrowserContext',
+    initializer: { isChromium: true },
+    guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a'
+  }
+}
+2021-04-05T19:16:18.790Z pw:channel:response {
+  id: 2,
+  result: {
+    context: { guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a' }
+  }
+}
+2021-04-05T19:16:18.790Z pw:api <= browser.newContext succeeded
+2021-04-05T19:16:18.790Z pw:api => browserContext.newPage started
+2021-04-05T19:16:18.791Z pw:channel:command {
+  id: 3,
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: 'newPage',
+  params: undefined
+}
+2021-04-05T19:16:18.792Z pw:protocol SEND ► {"id":5,"method":"Target.createTarget","params":{"url":"about:blank","browserContextId":"ACC46235F130BD84FBA639371DE79C07"}}
+2021-04-05T19:16:18.795Z pw:protocol ◀ RECV {"method":"Target.attachedToTarget","params":{"sessionId":"7752246CC26E4A8F823C26BDEFB39435","targetInfo":{"targetId":"AB5D0D0138D6D57AE80C3E33F8761701","type":"page","title":"","url":"","attached":true,"canAccessOpener":false,"browserContextId":"ACC46235F130BD84FBA639371DE79C07"},"waitingForDebugger":true}}
+2021-04-05T19:16:18.798Z pw:protocol SEND ► {"id":6,"method":"Browser.getWindowForTarget","sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.801Z pw:protocol ◀ RECV {"id":5,"result":{"targetId":"AB5D0D0138D6D57AE80C3E33F8761701"}}
+2021-04-05T19:16:18.801Z pw:protocol ◀ RECV {"id":6,"result":{"windowId":1,"bounds":{"left":0,"top":0,"width":800,"height":600,"windowState":"normal"}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.801Z pw:protocol SEND ► {"id":7,"method":"Page.enable","sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":8,"method":"Page.getFrameTree","sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":9,"method":"Log.enable","params":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":10,"method":"Page.setLifecycleEventsEnabled","params":{"enabled":true},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":11,"method":"Runtime.enable","params":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":12,"method":"Page.addScriptToEvaluateOnNewDocument","params":{"source":"","worldName":"__playwright_utility_world__"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.802Z pw:protocol SEND ► {"id":13,"method":"Network.enable","sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.803Z pw:protocol SEND ► {"id":14,"method":"Target.setAutoAttach","params":{"autoAttach":true,"waitForDebuggerOnStart":true,"flatten":true},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.803Z pw:protocol SEND ► {"id":15,"method":"Emulation.setFocusEmulationEnabled","params":{"enabled":true},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.803Z pw:protocol SEND ► {"id":16,"method":"Emulation.setDeviceMetricsOverride","params":{"mobile":false,"width":1280,"height":720,"screenWidth":1280,"screenHeight":720,"deviceScaleFactor":1,"screenOrientation":{"angle":90,"type":"landscapePrimary"}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.803Z pw:protocol SEND ► {"id":17,"method":"Browser.setWindowBounds","params":{"windowId":1,"bounds":{"width":1280,"height":720}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.804Z pw:protocol SEND ► {"id":18,"method":"Emulation.setEmulatedMedia","params":{"media":"","features":[{"name":"prefers-color-scheme","value":"light"}]},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.804Z pw:protocol SEND ► {"id":19,"method":"Runtime.runIfWaitingForDebugger","sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.805Z pw:protocol ◀ RECV {"id":17,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.851Z pw:protocol ◀ RECV {"id":14,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.852Z pw:protocol ◀ RECV {"id":7,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.853Z pw:protocol ◀ RECV {"id":8,"result":{"frameTree":{"frame":{"id":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","url":"about:blank","domainAndRegistry":"","securityOrigin":"://","mimeType":"text/html","adFrameType":"none","secureContextType":"InsecureScheme","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":["SharedArrayBuffers","SharedArrayBuffersTransferAllowed"]}}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.854Z pw:protocol SEND ► {"id":20,"method":"Page.createIsolatedWorld","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","grantUniveralAccess":true,"worldName":"__playwright_utility_world__"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"id":9,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","name":"commit","timestamp":1262321.486704},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","name":"DOMContentLoaded","timestamp":1262321.486757},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","name":"load","timestamp":1262321.486894},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","name":"networkAlmostIdle","timestamp":1262321.48719},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"1FA94DF8E814FABE0E9CAF1C003AB0DB","name":"networkIdle","timestamp":1262321.48719},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.855Z pw:protocol ◀ RECV {"id":10,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.856Z pw:protocol ◀ RECV {"method":"Runtime.executionContextCreated","params":{"context":{"id":1,"origin":"://","name":"","uniqueId":"-5183098312836296020.-9194001481554134791","auxData":{"isDefault":true,"type":"default","frameId":"AB5D0D0138D6D57AE80C3E33F8761701"}}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.856Z pw:protocol ◀ RECV {"id":11,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.856Z pw:protocol ◀ RECV {"id":12,"result":{"identifier":"1"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.857Z pw:protocol ◀ RECV {"id":13,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.857Z pw:protocol ◀ RECV {"id":15,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.857Z pw:protocol ◀ RECV {"id":16,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.857Z pw:protocol ◀ RECV {"id":18,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.857Z pw:protocol ◀ RECV {"id":19,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.858Z pw:channel:event {
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: '__create__',
+  params: {
+    type: 'Frame',
+    initializer: {
+      url: 'about:blank',
+      name: '',
+      parentFrame: undefined,
+      loadStates: [Array]
+    },
+    guid: 'Frame@1f23a02b576e841487f976a6d7d2f081'
+  }
+}
+2021-04-05T19:16:18.859Z pw:channel:event {
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: '__create__',
+  params: {
+    type: 'Page',
+    initializer: {
+      mainFrame: [Object],
+      videoRelativePath: undefined,
+      viewportSize: [Object],
+      isClosed: false
+    },
+    guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9'
+  }
+}
+2021-04-05T19:16:18.860Z pw:channel:event {
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: 'page',
+  params: { page: { guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9' } }
+}
+2021-04-05T19:16:18.860Z pw:channel:response {
+  id: 3,
+  result: { page: { guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9' } }
+}
+2021-04-05T19:16:18.860Z pw:api <= browserContext.newPage succeeded
+2021-04-05T19:16:18.860Z pw:api => page.route started
+2021-04-05T19:16:18.861Z pw:channel:command {
+  id: 4,
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'setNetworkInterceptionEnabled',
+  params: { enabled: true }
+}
+2021-04-05T19:16:18.861Z pw:protocol SEND ► {"id":21,"method":"Network.setCacheDisabled","params":{"cacheDisabled":true},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.861Z pw:protocol SEND ► {"id":22,"method":"Fetch.enable","params":{"handleAuthRequests":true,"patterns":[{"urlPattern":"*"}]},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.862Z pw:protocol ◀ RECV {"method":"Runtime.executionContextCreated","params":{"context":{"id":2,"origin":"","name":"__playwright_utility_world__","uniqueId":"-8688813226929206161.-6554876505943344818","auxData":{"isDefault":false,"type":"isolated","frameId":"AB5D0D0138D6D57AE80C3E33F8761701"}}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.862Z pw:protocol ◀ RECV {"id":20,"result":{"executionContextId":2},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.862Z pw:protocol ◀ RECV {"id":22,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.862Z pw:protocol ◀ RECV {"id":21,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.864Z pw:channel:response { id: 4, result: undefined }
+2021-04-05T19:16:18.864Z pw:api <= page.route succeeded
+2021-04-05T19:16:18.864Z pw:protocol SEND ► {"id":23,"method":"Network.setCacheDisabled","params":{"cacheDisabled":false},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.865Z pw:protocol ◀ RECV {"id":23,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.865Z pw:api => page.goto started
+2021-04-05T19:16:18.866Z pw:channel:command {
+  id: 5,
+  guid: 'Frame@1f23a02b576e841487f976a6d7d2f081',
+  method: 'goto',
+  params: {
+    url: 'http://localhost:8000/static_server/font-long-delay.html',
+    waitUntil: 'load'
+  }
+}
+2021-04-05T19:16:18.867Z pw:protocol SEND ► {"id":24,"method":"Page.navigate","params":{"url":"http://localhost:8000/static_server/font-long-delay.html","frameId":"AB5D0D0138D6D57AE80C3E33F8761701"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.867Z pw:api navigating to "http://localhost:8000/static_server/font-long-delay.html", waiting until "load"
+2021-04-05T19:16:18.868Z pw:protocol ◀ RECV {"method":"Network.requestWillBeSent","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","documentURL":"http://localhost:8000/static_server/font-long-delay.html","request":{"url":"http://localhost:8000/static_server/font-long-delay.html","method":"GET","headers":{"Upgrade-Insecure-Requests":"1","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36"},"mixedContentType":"none","initialPriority":"VeryHigh","referrerPolicy":"strict-origin-when-cross-origin"},"timestamp":1262321.504343,"wallTime":1617650178.867891,"initiator":{"type":"other"},"type":"Document","frameId":"AB5D0D0138D6D57AE80C3E33F8761701","hasUserGesture":false},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.869Z pw:protocol ◀ RECV {"method":"Fetch.requestPaused","params":{"requestId":"interception-job-1.0","request":{"url":"http://localhost:8000/static_server/font-long-delay.html","method":"GET","headers":{"Upgrade-Insecure-Requests":"1","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"},"initialPriority":"VeryHigh","referrerPolicy":"strict-origin-when-cross-origin"},"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","resourceType":"Document","networkId":"15825AF37F12FE35747A8EA347E0EAFA"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.871Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__create__',
+  params: {
+    type: 'Request',
+    initializer: {
+      frame: [Object],
+      url: 'http://localhost:8000/static_server/font-long-delay.html',
+      resourceType: 'document',
+      method: 'GET',
+      postData: undefined,
+      headers: [Array],
+      isNavigationRequest: true,
+      redirectedFrom: undefined
+    },
+    guid: 'Request@c8416364d41cbcdcf89c7432317ce6c2'
+  }
+}
+2021-04-05T19:16:18.871Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'request',
+  params: { request: { guid: 'Request@c8416364d41cbcdcf89c7432317ce6c2' } }
+}
+2021-04-05T19:16:18.872Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__create__',
+  params: {
+    type: 'Route',
+    initializer: { request: [Object] },
+    guid: 'Route@0ee5aad798536fcb6c8e508225cd97bd'
+  }
+}
+2021-04-05T19:16:18.872Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'route',
+  params: {
+    route: { guid: 'Route@0ee5aad798536fcb6c8e508225cd97bd' },
+    request: { guid: 'Request@c8416364d41cbcdcf89c7432317ce6c2' }
+  }
+}
+2021-04-05T19:16:18.873Z pw:api => route.continue started
+2021-04-05T19:16:18.873Z pw:channel:command {
+  id: 6,
+  guid: 'Route@0ee5aad798536fcb6c8e508225cd97bd',
+  method: 'continue',
+  params: {}
+}
+2021-04-05T19:16:18.873Z pw:protocol SEND ► {"id":25,"method":"Fetch.continueRequest","params":{"requestId":"interception-job-1.0"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.874Z pw:protocol ◀ RECV {"id":25,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.874Z pw:channel:response { id: 6, result: undefined }
+2021-04-05T19:16:18.874Z pw:api <= route.continue succeeded
+2021-04-05T19:16:18.877Z pw:protocol ◀ RECV {"method":"Network.requestWillBeSentExtraInfo","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","associatedCookies":[],"headers":{"Host":"localhost:8000","Connection":"keep-alive","Upgrade-Insecure-Requests":"1","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"navigate","Sec-Fetch-User":"?1","Sec-Fetch-Dest":"document","Accept-Encoding":"gzip, deflate, br"}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.878Z pw:protocol ◀ RECV {"method":"Network.responseReceivedExtraInfo","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","blockedCookies":[],"headers":{"Server":"SimpleHTTP/0.6 Python/3.7.3","Date":"Mon, 05 Apr 2021 19:16:18 GMT","Content-type":"text/html","Content-Length":"228","Last-Modified":"Mon, 05 Apr 2021 17:36:54 GMT"},"resourceIPAddressSpace":"Local","headersText":"HTTP/1.0 200 OK\r\nServer: SimpleHTTP/0.6 Python/3.7.3\r\nDate: Mon, 05 Apr 2021 19:16:18 GMT\r\nContent-type: text/html\r\nContent-Length: 228\r\nLast-Modified: Mon, 05 Apr 2021 17:36:54 GMT\r\n\r\n"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.880Z pw:protocol ◀ RECV {"method":"Network.responseReceived","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","timestamp":1262321.516205,"type":"Document","response":{"url":"http://localhost:8000/static_server/font-long-delay.html","status":200,"statusText":"OK","headers":{"Server":"SimpleHTTP/0.6 Python/3.7.3","Date":"Mon, 05 Apr 2021 19:16:18 GMT","Content-type":"text/html","Content-Length":"228","Last-Modified":"Mon, 05 Apr 2021 17:36:54 GMT"},"headersText":"HTTP/1.0 200 OK\r\nServer: SimpleHTTP/0.6 Python/3.7.3\r\nDate: Mon, 05 Apr 2021 19:16:18 GMT\r\nContent-type: text/html\r\nContent-Length: 228\r\nLast-Modified: Mon, 05 Apr 2021 17:36:54 GMT\r\n\r\n","mimeType":"text/html","requestHeaders":{"Host":"localhost:8000","Connection":"keep-alive","Upgrade-Insecure-Requests":"1","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","Sec-Fetch-Site":"none","Sec-Fetch-Mode":"navigate","Sec-Fetch-User":"?1","Sec-Fetch-Dest":"document","Accept-Encoding":"gzip, deflate, br"},"requestHeadersText":"GET /static_server/font-long-delay.html HTTP/1.1\r\nHost: localhost:8000\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nAccept-Encoding: gzip, deflate, br\r\n","connectionReused":false,"connectionId":11,"remoteIPAddress":"127.0.0.1","remotePort":8000,"fromDiskCache":false,"fromServiceWorker":false,"fromPrefetchCache":false,"encodedDataLength":185,"timing":{"requestTime":1262321.511885,"proxyStart":-1,"proxyEnd":-1,"dnsStart":1.274,"dnsEnd":1.281,"connectStart":1.281,"connectEnd":1.529,"sslStart":-1,"sslEnd":-1,"workerStart":-1,"workerReady":-1,"workerFetchStart":-1,"workerRespondWithSettled":-1,"sendStart":1.581,"sendEnd":1.67,"pushStart":0,"pushEnd":0,"receiveHeadersEnd":2.837},"responseTime":1617650178878.048,"protocol":"http/1.0","securityState":"secure"},"frameId":"AB5D0D0138D6D57AE80C3E33F8761701"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.881Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__create__',
+  params: {
+    type: 'Response',
+    initializer: {
+      request: [Object],
+      url: 'http://localhost:8000/static_server/font-long-delay.html',
+      status: 200,
+      statusText: 'OK',
+      requestHeaders: [Array],
+      headers: [Array],
+      timing: [Object]
+    },
+    guid: 'Response@4182bbe7d73d2bd66936e7ef68bf51a8'
+  }
+}
+2021-04-05T19:16:18.881Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'response',
+  params: { response: { guid: 'Response@4182bbe7d73d2bd66936e7ef68bf51a8' } }
+}
+2021-04-05T19:16:18.882Z pw:protocol ◀ RECV {"id":24,"result":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.882Z pw:protocol ◀ RECV {"method":"Page.frameStartedLoading","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.882Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"init","timestamp":1262321.518212},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.889Z pw:protocol ◀ RECV {"method":"Runtime.executionContextsCleared","params":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.889Z pw:protocol ◀ RECV {"method":"Page.frameNavigated","params":{"frame":{"id":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","url":"http://localhost:8000/static_server/font-long-delay.html","domainAndRegistry":"","securityOrigin":"http://localhost:8000","mimeType":"text/html","adFrameType":"none","secureContextType":"SecureLocalhost","crossOriginIsolatedContextType":"NotIsolated","gatedAPIFeatures":["SharedArrayBuffers","SharedArrayBuffersTransferAllowed"]}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.890Z pw:api   navigated to "http://localhost:8000/static_server/font-long-delay.html"
+2021-04-05T19:16:18.890Z pw:protocol ◀ RECV {"method":"Runtime.executionContextCreated","params":{"context":{"id":3,"origin":"http://localhost:8000","name":"","uniqueId":"2803969120417140292.2284823720444741113","auxData":{"isDefault":true,"type":"default","frameId":"AB5D0D0138D6D57AE80C3E33F8761701"}}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.891Z pw:protocol ◀ RECV {"method":"Runtime.executionContextCreated","params":{"context":{"id":4,"origin":"://","name":"__playwright_utility_world__","uniqueId":"-6044834729011412746.-5278878535214460365","auxData":{"isDefault":false,"type":"isolated","frameId":"AB5D0D0138D6D57AE80C3E33F8761701"}}},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.891Z pw:channel:event {
+  guid: 'Frame@1f23a02b576e841487f976a6d7d2f081',
+  method: 'loadstate',
+  params: { remove: 'domcontentloaded' }
+}
+2021-04-05T19:16:18.891Z pw:channel:event {
+  guid: 'Frame@1f23a02b576e841487f976a6d7d2f081',
+  method: 'loadstate',
+  params: { remove: 'load' }
+}
+2021-04-05T19:16:18.891Z pw:channel:event {
+  guid: 'Frame@1f23a02b576e841487f976a6d7d2f081',
+  method: 'navigated',
+  params: {
+    url: 'http://localhost:8000/static_server/font-long-delay.html',
+    name: '',
+    error: undefined,
+    newDocument: { request: [Object] }
+  }
+}
+2021-04-05T19:16:18.891Z pw:protocol ◀ RECV {"method":"Network.dataReceived","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","timestamp":1262321.525418,"dataLength":228,"encodedDataLength":0},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.892Z pw:protocol ◀ RECV {"method":"Network.loadingFinished","params":{"requestId":"15825AF37F12FE35747A8EA347E0EAFA","timestamp":1262321.515513,"encodedDataLength":413,"shouldReportCorbBlocking":false},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.893Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'requestFinished',
+  params: {
+    request: { guid: 'Request@c8416364d41cbcdcf89c7432317ce6c2' },
+    responseEndTiming: 11.17
+  }
+}
+2021-04-05T19:16:18.893Z pw:protocol ◀ RECV {"method":"Network.requestWillBeSent","params":{"requestId":"47.2","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","documentURL":"http://localhost:8000/static_server/font-long-delay.html","request":{"url":"http://httpbin.org/delay/1","method":"GET","headers":{"Origin":"http://localhost:8000","Referer":"http://localhost:8000/","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36"},"mixedContentType":"none","initialPriority":"VeryHigh","referrerPolicy":"strict-origin-when-cross-origin"},"timestamp":1262321.52854,"wallTime":1617650178.892081,"initiator":{"type":"parser","url":"http://localhost:8000/static_server/font-long-delay.html"},"type":"Font","frameId":"AB5D0D0138D6D57AE80C3E33F8761701","hasUserGesture":false},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.893Z pw:protocol ◀ RECV {"method":"Page.domContentEventFired","params":{"timestamp":1262321.52878},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.893Z pw:protocol ◀ RECV {"method":"Fetch.requestPaused","params":{"requestId":"interception-job-2.0","request":{"url":"http://httpbin.org/delay/1","method":"GET","headers":{"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","Origin":"http://localhost:8000","Accept":"*/*","Referer":"http://localhost:8000/"},"initialPriority":"VeryHigh","referrerPolicy":"strict-origin-when-cross-origin"},"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","resourceType":"Font","networkId":"47.2"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.893Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"DOMContentLoaded","timestamp":1262321.52878},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.894Z pw:api   "domcontentloaded" event fired
+2021-04-05T19:16:18.894Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__create__',
+  params: {
+    type: 'Request',
+    initializer: {
+      frame: [Object],
+      url: 'http://httpbin.org/delay/1',
+      resourceType: 'font',
+      method: 'GET',
+      postData: undefined,
+      headers: [Array],
+      isNavigationRequest: false,
+      redirectedFrom: undefined
+    },
+    guid: 'Request@c8228f09234ccc4413655eae5598703e'
+  }
+}
+2021-04-05T19:16:18.894Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'request',
+  params: { request: { guid: 'Request@c8228f09234ccc4413655eae5598703e' } }
+}
+2021-04-05T19:16:18.894Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__create__',
+  params: {
+    type: 'Route',
+    initializer: { request: [Object] },
+    guid: 'Route@5e072e4d113d7e713b8171d26f077c14'
+  }
+}
+2021-04-05T19:16:18.894Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'route',
+  params: {
+    route: { guid: 'Route@5e072e4d113d7e713b8171d26f077c14' },
+    request: { guid: 'Request@c8228f09234ccc4413655eae5598703e' }
+  }
+}
+2021-04-05T19:16:18.895Z pw:api => route.continue started
+2021-04-05T19:16:18.895Z pw:channel:command {
+  id: 7,
+  guid: 'Route@5e072e4d113d7e713b8171d26f077c14',
+  method: 'continue',
+  params: {}
+}
+2021-04-05T19:16:18.895Z pw:channel:event {
+  guid: 'Frame@1f23a02b576e841487f976a6d7d2f081',
+  method: 'loadstate',
+  params: { add: 'domcontentloaded' }
+}
+2021-04-05T19:16:18.895Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'domcontentloaded',
+  params: {}
+}
+2021-04-05T19:16:18.896Z pw:protocol SEND ► {"id":26,"method":"Fetch.continueRequest","params":{"requestId":"interception-job-2.0"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.896Z pw:protocol ◀ RECV {"id":26,"result":{},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.896Z pw:channel:response { id: 7, result: undefined }
+2021-04-05T19:16:18.896Z pw:api <= route.continue succeeded
+2021-04-05T19:16:18.897Z pw:protocol ◀ RECV {"method":"Fetch.requestPaused","params":{"requestId":"interception-job-3.0","request":{"url":"http://httpbin.org/delay/1","method":"GET","headers":{"Origin":"http://localhost:8000","User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.0 Safari/537.36","Accept":"*/*","Referer":"http://localhost:8000/"},"initialPriority":"VeryHigh","referrerPolicy":"strict-origin-when-cross-origin"},"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","resourceType":"Font","networkId":"47.2"},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.919Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"firstPaint","timestamp":1262321.546492},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.919Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"firstContentfulPaint","timestamp":1262321.546492},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:18.920Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"firstMeaningfulPaintCandidate","timestamp":1262321.546492},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:19.882Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"networkAlmostIdle","timestamp":1262321.528877},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:19.882Z pw:protocol ◀ RECV {"method":"Page.lifecycleEvent","params":{"frameId":"AB5D0D0138D6D57AE80C3E33F8761701","loaderId":"15825AF37F12FE35747A8EA347E0EAFA","name":"firstMeaningfulPaint","timestamp":1262321.546492},"sessionId":"7752246CC26E4A8F823C26BDEFB39435"}
+2021-04-05T19:16:48.885Z pw:channel:response {
+  id: 5,
+  error: {
+    error: {
+      message: 'Timeout 30000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        'navigating to "http://localhost:8000/static_server/font-long-delay.html", waiting until "load"\n' +
+        '============================================================\n' +
+        'Note: use DEBUG=pw:api environment variable to capture Playwright logs.',
+      stack: 'TimeoutError: Timeout 30000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        'navigating to "http://localhost:8000/static_server/font-long-delay.html", waiting until "load"\n' +
+        '============================================================\n' +
+        'Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n' +
+        '    at ProgressController.run (/app/node_modules/playwright/lib/server/progress.js:75:30)\n' +
+        '    at Frame.goto (/app/node_modules/playwright/lib/server/frames.js:422:27)\n' +
+        '    at FrameDispatcher.goto (/app/node_modules/playwright/lib/dispatchers/frameDispatcher.js:51:84)\n' +
+        '    at DispatcherConnection.dispatch (/app/node_modules/playwright/lib/dispatchers/dispatcher.js:181:52)',
+      name: 'TimeoutError'
+    }
+  }
+}
+2021-04-05T19:16:48.885Z pw:api <= page.goto failed
+page.goto: Timeout 30000ms exceeded.
+=========================== logs ===========================
+navigating to "http://localhost:8000/static_server/font-long-delay.html", waiting until "load"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/app/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/app/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/app/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /app/node_modules/playwright/lib/client/frame.js:102:65
+    at Frame._wrapApiCall (/app/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.goto (/app/node_modules/playwright/lib/client/frame.js:100:21)
+    at /app/node_modules/playwright/lib/client/page.js:296:60
+    at Page._attributeToPage (/app/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.goto (/app/node_modules/playwright/lib/client/page.js:296:21)
+    at /app/scripts/test_playwright.js:27:16 {
+  name: 'TimeoutError'
+}
+2021-04-05T19:16:48.886Z pw:api => browser.close started
+2021-04-05T19:16:48.887Z pw:channel:command {
+  id: 8,
+  guid: 'Browser@abf012a2b1208c78942f97d8129605ac',
+  method: 'close',
+  params: undefined
+}
+2021-04-05T19:16:48.887Z pw:browser [pid=20] <gracefully close start>
+2021-04-05T19:16:48.887Z pw:protocol ◀ RECV {"id":-9999,"result":{}}
+2021-04-05T19:16:48.888Z pw:protocol ◀ RECV {"method":"Target.detachedFromTarget","params":{"sessionId":"7752246CC26E4A8F823C26BDEFB39435","targetId":"AB5D0D0138D6D57AE80C3E33F8761701"}}
+2021-04-05T19:16:48.890Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: 'close',
+  params: {}
+}
+2021-04-05T19:16:48.890Z pw:channel:event {
+  guid: 'Page@0d58e7cc4138ac94e8ef9ba6cf7bf5d9',
+  method: '__dispose__',
+  params: {}
+}
+2021-04-05T19:16:48.892Z pw:channel:event {
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: 'close',
+  params: {}
+}
+2021-04-05T19:16:48.892Z pw:channel:event {
+  guid: 'BrowserContext@b9f7536e783e2897bda4ebaab1fa7e6a',
+  method: '__dispose__',
+  params: {}
+}
+2021-04-05T19:16:48.892Z pw:channel:event {
+  guid: 'Browser@abf012a2b1208c78942f97d8129605ac',
+  method: 'close',
+  params: {}
+}
+2021-04-05T19:16:48.892Z pw:channel:event {
+  guid: 'Browser@abf012a2b1208c78942f97d8129605ac',
+  method: '__dispose__',
+  params: {}
+}
+2021-04-05T19:16:48.904Z pw:browser [pid=20] <process did exit: exitCode=0, signal=null>
+2021-04-05T19:16:48.905Z pw:browser [pid=20] <gracefully close end>
+2021-04-05T19:16:48.906Z pw:channel:response { id: 8, result: undefined }
+2021-04-05T19:16:48.906Z pw:api <= browser.close succeeded
